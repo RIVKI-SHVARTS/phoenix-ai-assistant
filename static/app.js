@@ -20,8 +20,31 @@ function sourceParts(text) {
   return parts;
 }
 
-function appendSourceText(element, text) {
-  for (const part of sourceParts(text)) {
+function answerParts(text) {
+  return sourceParts(text).flatMap(part => {
+    if (part.href) return [part];
+    const pieces = [];
+    const urls = /https?:\/\/[^\s<>"'\u200b\u200e\u200f\u202a-\u202e\u2066-\u2069]+/g;
+    let end = 0;
+    for (const match of part.text.matchAll(urls)) {
+      let target = match[0].replace(/[.,;!?:\u05c3]+$/g, '');
+      while (target.endsWith(')') && (target.match(/\)/g) || []).length > (target.match(/\(/g) || []).length) target = target.slice(0, -1);
+      if (match.index > end) pieces.push({text: part.text.slice(end, match.index)});
+      let href = null;
+      try {
+        const url = new URL(target);
+        if (['https:', 'http:'].includes(url.protocol) && !url.username && !url.password) href = url.href;
+      } catch (_) { /* Keep invalid URLs as ordinary text. */ }
+      pieces.push(href ? {text: target, href} : {text: target});
+      end = match.index + target.length;
+    }
+    if (end < part.text.length) pieces.push({text: part.text.slice(end)});
+    return pieces;
+  });
+}
+
+function appendSourceText(element, text, detectBareUrls = false) {
+  for (const part of detectBareUrls ? answerParts(text) : sourceParts(text)) {
     if (!part.href) { element.append(document.createTextNode(part.text)); continue; }
     const anchor = document.createElement('a');
     anchor.href = part.href;
@@ -35,7 +58,7 @@ function appendSourceText(element, text) {
   }
 }
 
-if (typeof module !== 'undefined' && module.exports) module.exports = { sourceParts, appendSourceText };
+if (typeof module !== 'undefined' && module.exports) module.exports = { sourceParts, answerParts, appendSourceText };
 
 if (typeof document !== 'undefined') {
 const form = document.getElementById('search-form');
@@ -94,6 +117,8 @@ form.addEventListener('submit', async event => {
   const text = question.value.trim();
   if (!text || pending || !ready) return;
   pending = true;
+  form.setAttribute('aria-busy', 'true');
+  status.className = 'is-loading';
   button.disabled = true;
   reset.disabled = true;
   status.textContent = 'מחפש במקורות ובודק את התשובה…';
@@ -109,7 +134,7 @@ form.addEventListener('submit', async event => {
       for (const claim of data.claims) {
         const paragraph = document.createElement('p');
         paragraph.className = 'answer-text';
-        paragraph.textContent = claim.text;
+        appendSourceText(paragraph, claim.text, true);
         const refs = [...new Set(claim.evidence.map(e => e.source_id))];
         for (const id of refs) {
           const source = data.sources.find(s => s.source_id === id);
@@ -152,6 +177,6 @@ form.addEventListener('submit', async event => {
     question.focus();
   } catch (error) {
     status.textContent = error.name === 'TimeoutError' ? 'המענה ארך זמן רב. המתיני לפני ניסיון נוסף; הבקשה עשויה עדיין להתבצע.' : (error.message || 'אירעה תקלה במענה.');
-  } finally { pending = false; button.disabled = !ready; reset.disabled = false; }
+  } finally { pending = false; status.className = ''; form.setAttribute('aria-busy', 'false'); button.disabled = !ready; reset.disabled = false; }
 });
 }

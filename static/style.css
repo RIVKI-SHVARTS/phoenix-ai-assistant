@@ -2,3 +2,5 @@
 
 .secondary{background:transparent;color:#175c48;border:1px solid #9bb6aa;margin-inline-start:10px}details{margin-top:16px;border-top:1px solid #d9e5df;padding-top:12px}summary{cursor:pointer;font-weight:bold}.answer-text{white-space:pre-wrap;overflow-wrap:anywhere}
 .claim-proof{border:1px solid #d9e5df;border-radius:10px;background:#f7faf8;padding:10px 14px;margin-bottom:18px}.claim-proof summary{font-size:.9rem}.claim-proof blockquote{white-space:pre-wrap;overflow-wrap:anywhere;border-right:3px solid #8aa36a;margin:12px 0;padding:8px 14px;color:#344f46}
+
+.greeting{font-size:clamp(1.35rem,3.6vw,1.8rem);color:#175c48;margin-bottom:6px}.intro{color:#4f6c64;margin-top:0}#keyboard-hint{font-size:.8rem}#status.is-loading{display:flex;align-items:center;gap:12px;padding:12px 0}#status.is-loading::before{content:"";display:inline-block;flex:0 0 28px;width:28px;height:28px;border:3px solid #cfe1d7;border-top-color:#175c48;border-inline-end-color:#91ab73;border-radius:50%;animation:happy-spin .9s linear infinite}@keyframes happy-spin{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){#status.is-loading::before{animation:none}}
