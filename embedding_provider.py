@@ -26,7 +26,10 @@ class BudgetExceeded(RuntimeError):
 class TokenBudget:
     """Shared persistent ceiling for this app's embedding tokens (not all API spend)."""
 
-    def __init__(self, path, limit=1000000):
+    def __init__(self, path, limit=None):
+        if limit is None:
+            config = Path(path).parent / 'embedding-budget.json'
+            limit = json.loads(config.read_text(encoding='utf-8'))['token_limit'] if config.exists() else 1000000
         if not isinstance(limit, int) or limit <= 0:
             raise ValueError("Token limit must be positive")
         self.path, self.limit = Path(path), limit
