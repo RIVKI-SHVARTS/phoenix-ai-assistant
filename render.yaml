@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: phoenix-evidence-chat
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements-cloud.txt
+    startCommand: python cloud_start.py
+    healthCheckPath: /healthz
+    autoDeploy: false
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: PHOENIX_INDEX_ROOT
+        value: runtime/index
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: DEMO_PASSWORD
+        sync: false

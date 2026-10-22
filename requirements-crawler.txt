@@ -1,0 +1,4 @@
+# Direct dependencies tested on Python 3.12. Transitive dependencies are not locked.
+beautifulsoup4==4.15.0
+protego==0.7.0
+trafilatura==2.3.1

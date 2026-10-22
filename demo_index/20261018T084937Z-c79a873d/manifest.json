@@ -1,0 +1,22 @@
+{
+  "source_pages": 6,
+  "included_pages": 6,
+  "excluded_pages": [],
+  "chunks": 178,
+  "embedding_tokens": 67735,
+  "max_chunk_tokens": 649,
+  "chunking_version": "headings-paragraphs-v1",
+  "max_tokens": 650,
+  "overlap_tokens": 80,
+  "encoding": "cl100k_base",
+  "generation": "20261018T084937Z-c79a873d",
+  "mode": "semantic",
+  "status": "ready",
+  "created_at": "2026-10-18T08:49:37.349615+00:00",
+  "source_sha256": "aab5e8b7dde98c5051befde64b9ed4c0caede8d6f17c8a622684fa44c91aa433",
+  "model": "text-embedding-3-large",
+  "dimensions": 3072,
+  "semantic_quality_verified": false,
+  "vector_backend": "sqlite-numpy-v1",
+  "chunks_sha256": "74b7148b1b318193ebe9b05cd32cbfecea50635f5b171d1a4fcb8f941d39375d"
+}

@@ -1,0 +1,20 @@
+{
+  "base_url": "https://www.fnx.co.il",
+  "user_agent": "PhoenixRAGPrototype/0.2",
+  "max_pages": 6,
+  "max_requests": 100,
+  "max_sitemaps": 20,
+  "max_discovered": 20000,
+  "delay_seconds": 1.0,
+  "timeout_seconds": 25,
+  "max_response_bytes": 8388608,
+  "max_retries": 2,
+  "seeds": [
+    "https://www.fnx.co.il/apartment-insurance/",
+    "https://www.fnx.co.il/claims-customer-service/claims-appartment-insurance/damage-to-the-apartment/",
+    "https://www.fnx.co.il/claims-customer-service/claims-car-insurance/claims-property-car-insurance/",
+    "https://www.fnx.co.il/claims-customer-service/claims-appartment-insurance/claims-third-party-house/",
+    "https://www.fnx.co.il/customer-service/",
+    "https://www.fnx.co.il/apartment-insurance/apartment-contents-insurance/"
+  ]
+}

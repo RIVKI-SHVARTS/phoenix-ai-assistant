@@ -1,0 +1,19 @@
+User-agent: *
+Disallow: /testimtempp
+Disallow: /info/default.aspx
+Disallow: /SPF
+Disallow: /mobile-tzair
+Disallow: /Sales/Pages/Car/CarInsuranceNew.aspx
+Disallow: /Sales/Pages/Travel/TravelInsuranceNew.aspx
+Disallow: /travel-redirect.aspx?ref=travelinfo
+Disallow: /servicepages/sharedpages/discountsimulator
+Disallow: /MarketingCalculators
+Disallow: /news/cooperation-with-neighbors.aspx
+Disallow: /*?page=
+Disallow: /*?domain=
+Disallow: /*?tag=
+Disallow: /*?staff=
+Disallow: /more-information/
+Disallow: /sites/docs/polarchive/generalinsurance/policy_300203158_0619.pdf
+
+Sitemap: https://www.fnx.co.il/sitemap.xml

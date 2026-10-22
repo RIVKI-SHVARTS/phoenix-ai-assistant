@@ -1,0 +1,174 @@
+[
+  {
+    "id": "R01",
+    "kind": "direct",
+    "question": "אילו מסמכים צריך לצרף לתביעה על נזק לדירה?",
+    "expected_url": "https://www.fnx.co.il/claims-customer-service/claims-appartment-insurance/damage-to-the-apartment/",
+    "evidence_all": [
+      "תמונות ממקום האירוע",
+      "פרטי חשבון בנק"
+    ]
+  },
+  {
+    "id": "R02",
+    "kind": "direct",
+    "question": "לאיזו כתובת מייל שולחים תביעה על נזק לדירה?",
+    "expected_url": "https://www.fnx.co.il/claims-customer-service/claims-appartment-insurance/damage-to-the-apartment/",
+    "evidence_all": [
+      "rechush@fnx.co.il"
+    ]
+  },
+  {
+    "id": "R03",
+    "kind": "direct",
+    "question": "מה צריך לצרף במקרה של שריפה בדירה?",
+    "expected_url": "https://www.fnx.co.il/claims-customer-service/claims-appartment-insurance/damage-to-the-apartment/",
+    "evidence_all": [
+      "אישור מכבי אש"
+    ]
+  },
+  {
+    "id": "R04",
+    "kind": "direct",
+    "question": "איך אזרח ותיק מגיש תביעת נזק לדירה?",
+    "expected_url": "https://www.fnx.co.il/claims-customer-service/claims-appartment-insurance/damage-to-the-apartment/",
+    "evidence_all": [
+      "67",
+      "בעל-פה"
+    ]
+  },
+  {
+    "id": "R05",
+    "kind": "direct",
+    "question": "תוך כמה זמן שולחים הודעה על מסמכים חסרים בתביעת דירה?",
+    "expected_url": "https://www.fnx.co.il/claims-customer-service/claims-appartment-insurance/damage-to-the-apartment/",
+    "evidence_all": [
+      "14 יום"
+    ]
+  },
+  {
+    "id": "R06",
+    "kind": "direct",
+    "question": "מתי מתקבלת החלטה אחרי שהוגשו כל המסמכים בתביעת דירה?",
+    "expected_url": "https://www.fnx.co.il/claims-customer-service/claims-appartment-insurance/damage-to-the-apartment/",
+    "evidence_all": [
+      "30 יום"
+    ]
+  },
+  {
+    "id": "R07",
+    "kind": "direct",
+    "question": "איך מגישים תביעת רכב באופן דיגיטלי?",
+    "expected_url": "https://www.fnx.co.il/claims-customer-service/claims-car-insurance/claims-property-car-insurance/",
+    "evidence_all": [
+      "https://carclaim.fnx.co.il/home"
+    ]
+  },
+  {
+    "id": "R08",
+    "kind": "direct",
+    "question": "לאיזה מייל שולחים תביעת צד ג בדירה על נזקי רכוש?",
+    "expected_url": "https://www.fnx.co.il/claims-customer-service/claims-appartment-insurance/claims-third-party-house/",
+    "evidence_all": [
+      "Tviotgimel@fnx.co.il"
+    ]
+  },
+  {
+    "id": "R09",
+    "kind": "direct",
+    "question": "לאיזה מייל שולחים תביעת צד ג בדירה על נזקי גוף?",
+    "expected_url": "https://www.fnx.co.il/claims-customer-service/claims-appartment-insurance/claims-third-party-house/",
+    "evidence_all": [
+      "Ptviot_Havuiot@fnx.co.il"
+    ]
+  },
+  {
+    "id": "R10",
+    "kind": "direct",
+    "question": "מה גובר אם יש סתירה בין המידע בפרסום לתנאי הפוליסה בביטוח תכולה?",
+    "expected_url": "https://www.fnx.co.il/apartment-insurance/apartment-contents-insurance/",
+    "evidence_all": [
+      "תנאי הפוליסה גוברים"
+    ]
+  },
+  {
+    "id": "R11",
+    "kind": "direct",
+    "question": "האם ביטוח תכולה כולל חבות מעבידים לעובדי משק הבית?",
+    "expected_url": "https://www.fnx.co.il/apartment-insurance/apartment-contents-insurance/",
+    "evidence_all": [
+      "ביטוח חבות מעבידים לעובדי משק הבית"
+    ]
+  },
+  {
+    "id": "R12",
+    "kind": "direct",
+    "question": "איפה מוצאים איתור שרברב בשירות ופעולות?",
+    "expected_url": "https://www.fnx.co.il/customer-service/",
+    "evidence_all": [
+      "איתור שרברב"
+    ]
+  },
+  {
+    "id": "R13",
+    "kind": "paraphrase",
+    "question": "פרצו לי הביתה וגנבו רכוש. מה הדבר הראשון שצריך לעשות?",
+    "expected_url": "https://www.fnx.co.il/claims-customer-service/claims-appartment-insurance/damage-to-the-apartment/",
+    "evidence_all": [
+      "לפנות למשטרה"
+    ]
+  },
+  {
+    "id": "R14",
+    "kind": "paraphrase",
+    "question": "יש לי נזילה בצנרת בבית, לאן פונים?",
+    "expected_url": "https://www.fnx.co.il/claims-customer-service/claims-appartment-insurance/damage-to-the-apartment/",
+    "evidence_all": [
+      "נגרם לך נזק לצנרת",
+      "5070"
+    ]
+  },
+  {
+    "id": "R15",
+    "kind": "paraphrase",
+    "question": "אני בן 70 ולא מסתדר עם כתיבה. אפשר למסור את התביעה לדירה בטלפון?",
+    "expected_url": "https://www.fnx.co.il/claims-customer-service/claims-appartment-insurance/damage-to-the-apartment/",
+    "evidence_all": [
+      "67",
+      "בעל-פה"
+    ]
+  },
+  {
+    "id": "R16",
+    "kind": "paraphrase",
+    "question": "שלחתי כבר את כל הניירת על הדירה. כמה זמן עד שיחזרו אליי עם החלטה?",
+    "expected_url": "https://www.fnx.co.il/claims-customer-service/claims-appartment-insurance/damage-to-the-apartment/",
+    "evidence_all": [
+      "30 יום"
+    ]
+  },
+  {
+    "id": "N01",
+    "kind": "unsupported",
+    "question": "מה מחיר הביטוח האישי שלי לחודש הבא?",
+    "note": "No labeled answer in the six-page corpus; candidates alone must not be treated as an answer."
+  },
+  {
+    "id": "N02",
+    "kind": "unsupported",
+    "question": "מה הסטטוס של התביעה שלי מספר 12345?",
+    "note": "No labeled answer in the six-page corpus; candidates alone must not be treated as an answer."
+  },
+  {
+    "id": "N03",
+    "kind": "unsupported",
+    "question": "מה תהיה התשואה של קרן הפנסיה בשנה הבאה?",
+    "note": "No labeled answer in the six-page corpus; candidates alone must not be treated as an answer."
+  },
+  {
+    "id": "N04",
+    "kind": "unsupported",
+    "question": "איך מכינים עוגת שוקולד?",
+    "note": "No labeled answer in the six-page corpus; candidates alone must not be treated as an answer."
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "url": "https://www.fnx.co.il/robots.txt",
+    "status": 200,
+    "bytes": 614
+  },
+  {
+    "url": "https://www.fnx.co.il/sitemap.xml",
+    "status": 200,
+    "bytes": 630341
+  },
+  {
+    "url": "https://www.fnx.co.il/apartment-insurance/",
+    "status": 200,
+    "bytes": 734127
+  },
+  {
+    "url": "https://www.fnx.co.il/claims-customer-service/claims-appartment-insurance/damage-to-the-apartment/",
+    "status": 200,
+    "bytes": 533057
+  },
+  {
+    "url": "https://www.fnx.co.il/claims-customer-service/claims-car-insurance/claims-property-car-insurance/",
+    "status": 200,
+    "bytes": 578406
+  },
+  {
+    "url": "https://www.fnx.co.il/claims-customer-service/claims-appartment-insurance/claims-third-party-house/",
+    "status": 200,
+    "bytes": 530428
+  },
+  {
+    "url": "https://www.fnx.co.il/customer-service/",
+    "status": 200,
+    "bytes": 587447
+  },
+  {
+    "url": "https://www.fnx.co.il/apartment-insurance/apartment-contents-insurance/",
+    "status": 200,
+    "bytes": 698235
+  }
+]

@@ -1,0 +1,129 @@
+{
+  "run_id": "20261015T084034Z-225fef25",
+  "started_at": "2026-10-15T08:40:34.175473+00:00",
+  "extractor_version": "main-dom-v1",
+  "config": {
+    "base_url": "https://www.fnx.co.il",
+    "user_agent": "PhoenixRAGPrototype/0.2",
+    "max_pages": 6,
+    "max_requests": 100,
+    "max_sitemaps": 20,
+    "max_discovered": 20000,
+    "delay_seconds": 1.0,
+    "timeout_seconds": 25,
+    "max_response_bytes": 8388608,
+    "max_retries": 2,
+    "seeds": [
+      "https://www.fnx.co.il/apartment-insurance/",
+      "https://www.fnx.co.il/claims-customer-service/claims-appartment-insurance/damage-to-the-apartment/",
+      "https://www.fnx.co.il/claims-customer-service/claims-car-insurance/claims-property-car-insurance/",
+      "https://www.fnx.co.il/claims-customer-service/claims-appartment-insurance/claims-third-party-house/",
+      "https://www.fnx.co.il/customer-service/",
+      "https://www.fnx.co.il/apartment-insurance/apartment-contents-insurance/"
+    ]
+  },
+  "status": "completed",
+  "sitemaps": [
+    {
+      "url": "https://www.fnx.co.il/sitemap.xml",
+      "status": "read",
+      "kind": "urlset",
+      "entries": 1645
+    }
+  ],
+  "failures": [],
+  "pages": [
+    {
+      "url": "https://www.fnx.co.il/apartment-insurance/",
+      "status": "extracted",
+      "warnings": [
+        "heuristic_extractor_would_omit_content"
+      ],
+      "quality": {
+        "main_text_chars": 14191,
+        "extracted_chars": 17406,
+        "source_token_coverage": 1.0,
+        "trafilatura_token_coverage": 0.811746
+      }
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/claims-appartment-insurance/damage-to-the-apartment/",
+      "status": "extracted",
+      "warnings": [
+        "heuristic_extractor_would_omit_content"
+      ],
+      "quality": {
+        "main_text_chars": 4581,
+        "extracted_chars": 5764,
+        "source_token_coverage": 1.0,
+        "trafilatura_token_coverage": 0.920398
+      }
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/claims-car-insurance/claims-property-car-insurance/",
+      "status": "extracted",
+      "warnings": [
+        "heuristic_extractor_would_omit_content"
+      ],
+      "quality": {
+        "main_text_chars": 9588,
+        "extracted_chars": 11340,
+        "source_token_coverage": 1.0,
+        "trafilatura_token_coverage": 0.949112
+      }
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/claims-appartment-insurance/claims-third-party-house/",
+      "status": "extracted",
+      "warnings": [
+        "heuristic_extractor_would_omit_content"
+      ],
+      "quality": {
+        "main_text_chars": 4795,
+        "extracted_chars": 6288,
+        "source_token_coverage": 1.0,
+        "trafilatura_token_coverage": 0.941035
+      }
+    },
+    {
+      "url": "https://www.fnx.co.il/customer-service/",
+      "status": "extracted",
+      "warnings": [],
+      "quality": {
+        "main_text_chars": 2894,
+        "extracted_chars": 8903,
+        "source_token_coverage": 1.0,
+        "trafilatura_token_coverage": 0.983773
+      }
+    },
+    {
+      "url": "https://www.fnx.co.il/apartment-insurance/apartment-contents-insurance/",
+      "status": "extracted",
+      "warnings": [
+        "heuristic_extractor_would_omit_content"
+      ],
+      "quality": {
+        "main_text_chars": 13137,
+        "extracted_chars": 16142,
+        "source_token_coverage": 1.0,
+        "trafilatura_token_coverage": 0.796491
+      }
+    }
+  ],
+  "discovery_truncated": false,
+  "effective_delay_seconds": 1.0,
+  "stop_reason": "max_pages",
+  "finished_at": "2026-10-15T08:41:25.553243+00:00",
+  "page_attempts": 6,
+  "http_requests": 8,
+  "discovered_count": 1761,
+  "remaining_queue": 1645,
+  "discovery_status_counts": {
+    "extracted": 6,
+    "queued": 1645,
+    "outside_scope_or_query": 86,
+    "pdf_deferred": 22,
+    "non_html_resource": 2
+  },
+  "reextracted_at": "2026-10-15T08:45:16.705466+00:00"
+}

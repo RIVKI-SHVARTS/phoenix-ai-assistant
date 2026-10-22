@@ -1,0 +1,15 @@
+.env
+.venv/
+__pycache__/
+data/index/
+data/raw/
+.env.*
+!.env.example
+runtime/
+evaluation/chat-run.*
+answer-diagnostic*.json
+review-diagnostic*.json
+*.zip
+
+phoenix-final-checks*.json
+diagnostic-case-*.json

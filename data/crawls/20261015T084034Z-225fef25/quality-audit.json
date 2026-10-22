@@ -1,0 +1,198 @@
+{
+  "all_passed": true,
+  "pages": [
+    {
+      "url": "https://www.fnx.co.il/apartment-insurance/",
+      "title": "ביטוח דירה: הגנה למבנה ותכולה – עד 40% הנחה | הפניקס",
+      "pass": true,
+      "blocks_checked": 119,
+      "missing_blocks": [],
+      "critical_checks": [
+        {
+          "phrase": "ביטוח לעובדים אקראיים או קבועים",
+          "present_in_original": true,
+          "present_in_extraction": true
+        },
+        {
+          "phrase": "תנאי הפוליסה גוברים",
+          "present_in_original": true,
+          "present_in_extraction": true
+        }
+      ],
+      "global_navigation_leaks": [],
+      "table_count_in_main": 0,
+      "quality": {
+        "main_text_chars": 14191,
+        "extracted_chars": 17406,
+        "source_token_coverage": 1.0,
+        "trafilatura_token_coverage": 0.811746
+      }
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/claims-appartment-insurance/damage-to-the-apartment/",
+      "title": "תביעות ביטוח דירה | הפניקס",
+      "pass": true,
+      "blocks_checked": 37,
+      "missing_blocks": [],
+      "critical_checks": [
+        {
+          "phrase": "תמונות ממקום האירוע",
+          "present_in_original": true,
+          "present_in_extraction": true
+        },
+        {
+          "phrase": "פרטי חשבון בנק",
+          "present_in_original": true,
+          "present_in_extraction": true
+        },
+        {
+          "phrase": "אישור משטרה",
+          "present_in_original": true,
+          "present_in_extraction": true
+        },
+        {
+          "phrase": "יודגש, כי אין במפורט בהנחיות אלו כדי להוות הכרה בכיסוי הביטוחי",
+          "present_in_original": true,
+          "present_in_extraction": true
+        },
+        {
+          "phrase": "rechush@fnx.co.il",
+          "present_in_original": true,
+          "present_in_extraction": true
+        }
+      ],
+      "global_navigation_leaks": [],
+      "table_count_in_main": 0,
+      "quality": {
+        "main_text_chars": 4581,
+        "extracted_chars": 5764,
+        "source_token_coverage": 1.0,
+        "trafilatura_token_coverage": 0.920398
+      }
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/claims-car-insurance/claims-property-car-insurance/",
+      "title": "תביעות - רכב רכוש - מבוטח | הפניקס",
+      "pass": true,
+      "blocks_checked": 60,
+      "missing_blocks": [],
+      "critical_checks": [
+        {
+          "phrase": "לצרף את המסמכים",
+          "present_in_original": true,
+          "present_in_extraction": true
+        },
+        {
+          "phrase": "יודגש, כי אין במפורט בהנחיות אלו כדי להוות הכרה בכיסוי הביטוחי",
+          "present_in_original": true,
+          "present_in_extraction": true
+        }
+      ],
+      "global_navigation_leaks": [],
+      "table_count_in_main": 0,
+      "quality": {
+        "main_text_chars": 9588,
+        "extracted_chars": 11340,
+        "source_token_coverage": 1.0,
+        "trafilatura_token_coverage": 0.949112
+      }
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/claims-appartment-insurance/claims-third-party-house/",
+      "title": "תביעות ביטוח דירה צד ג' | הפניקס",
+      "pass": true,
+      "blocks_checked": 29,
+      "missing_blocks": [],
+      "critical_checks": [
+        {
+          "phrase": "הגשת תביעה כללית",
+          "present_in_original": true,
+          "present_in_extraction": true
+        },
+        {
+          "phrase": "יודגש, כי אין במפורט בהנחיות אלו כדי להוות הכרה בכיסוי הביטוחי",
+          "present_in_original": true,
+          "present_in_extraction": true
+        }
+      ],
+      "global_navigation_leaks": [],
+      "table_count_in_main": 0,
+      "quality": {
+        "main_text_chars": 4795,
+        "extracted_chars": 6288,
+        "source_token_coverage": 1.0,
+        "trafilatura_token_coverage": 0.941035
+      }
+    },
+    {
+      "url": "https://www.fnx.co.il/customer-service/",
+      "title": "הפניקס שירות לקוחות - דרכי ההתקשרות שלכם עמנו | הפניקס",
+      "pass": true,
+      "blocks_checked": 27,
+      "missing_blocks": [],
+      "critical_checks": [
+        {
+          "phrase": "הגשת תביעת רכב",
+          "present_in_original": true,
+          "present_in_extraction": true
+        },
+        {
+          "phrase": "הגשת תביעת דירה",
+          "present_in_original": true,
+          "present_in_extraction": true
+        },
+        {
+          "phrase": "איתור שרברב",
+          "present_in_original": true,
+          "present_in_extraction": true
+        }
+      ],
+      "global_navigation_leaks": [],
+      "table_count_in_main": 0,
+      "quality": {
+        "main_text_chars": 2894,
+        "extracted_chars": 8903,
+        "source_token_coverage": 1.0,
+        "trafilatura_token_coverage": 0.983773
+      }
+    },
+    {
+      "url": "https://www.fnx.co.il/apartment-insurance/apartment-contents-insurance/",
+      "title": "ביטוח תכולה: הגנה מלאה לרכוש בדירה שלכם | הפניקס",
+      "pass": true,
+      "blocks_checked": 117,
+      "missing_blocks": [],
+      "critical_checks": [
+        {
+          "phrase": "ביטוח חבות מעבידים לעובדי משק הבית",
+          "present_in_original": true,
+          "present_in_extraction": true
+        },
+        {
+          "phrase": "תנאי הפוליסה גוברים",
+          "present_in_original": true,
+          "present_in_extraction": true
+        },
+        {
+          "phrase": "פריטים יקרי ערך",
+          "present_in_original": true,
+          "present_in_extraction": true
+        }
+      ],
+      "global_navigation_leaks": [],
+      "table_count_in_main": 0,
+      "quality": {
+        "main_text_chars": 13137,
+        "extracted_chars": 16142,
+        "source_token_coverage": 1.0,
+        "trafilatura_token_coverage": 0.796491
+      }
+    }
+  ],
+  "limitations": [
+    "Tests use saved HTML, not browser-rendered content.",
+    "Token/block retention is not proof of semantic correctness.",
+    "No real HTML table occurred in these six pages; table preservation is covered by a synthetic unit test.",
+    "No AI answers or full-site coverage evaluated."
+  ]
+}
