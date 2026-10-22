@@ -4,6 +4,8 @@ import os
 from pathlib import Path
 import re
 import shutil
+import uuid
+from index_package import unpack
 from retrieval import SearchIndex
 from vector_store import VectorStore
 
@@ -12,16 +14,31 @@ BASE = Path(__file__).resolve().parent
 
 def prepare_index(source, destination):
     source, destination = Path(source), Path(destination)
-    if not (destination / 'CURRENT.json').exists():
-        current = json.loads((source / 'CURRENT.json').read_text(encoding='utf-8'))
-        generation = current['generation']
-        if not re.fullmatch(r'\d{8}T\d{6}Z-[0-9a-f]{8}', generation):
-            raise ValueError('Invalid generation')
+    current = json.loads((source / 'CURRENT.json').read_text(encoding='utf-8'))
+    generation = current['generation']
+    if not re.fullmatch(r'\d{8}T\d{6}Z-[0-9a-f]{8}', generation):
+        raise ValueError('Invalid generation')
+    active = json.loads((destination / 'CURRENT.json').read_text(encoding='utf-8')) if (destination / 'CURRENT.json').exists() else None
+    if active != current:
         destination.mkdir(parents=True, exist_ok=True)
-        staging = destination / (generation + '.staging')
-        if staging.exists():
-            shutil.rmtree(staging)
+        staging = destination / (generation + '.staging-' + uuid.uuid4().hex)
         shutil.copytree(source / generation, staging)
+        unpack(staging)
+        # Validate before switching away from any existing working generation.
+        # SearchIndex validates the byte signature, IDs and recorded count.
+        raw = (staging / 'chunks.jsonl').read_bytes()
+        m = json.loads((staging / 'manifest.json').read_text(encoding='utf-8'))
+        import hashlib
+        if hashlib.sha256(raw).hexdigest() != m['chunks_sha256']:
+            raise ValueError('Index hash mismatch')
+        if m['status'] != 'ready' or m['mode'] != 'semantic' or m.get('vector_backend') != 'sqlite-numpy-v1':
+            raise ValueError('Cloud demo requires a ready semantic index')
+        rows = [json.loads(line) for line in raw.decode('utf-8').splitlines()]
+        if len(rows) != m['chunks'] or len({r['chunk_id'] for r in rows}) != len(rows):
+            raise ValueError('Invalid chunk count or duplicate IDs')
+        if VectorStore(staging / 'vectors', m['model'], m['dimensions']).count() != len(rows):
+            raise ValueError('Vector count mismatch')
+        del rows, raw
         target = destination / generation
         if target.exists():
             shutil.rmtree(target)
