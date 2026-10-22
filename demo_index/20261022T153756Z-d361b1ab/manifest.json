@@ -1,0 +1,939 @@
+{
+  "source_pages": 1114,
+  "included_pages": 885,
+  "excluded_pages": [
+    {
+      "url": "https://www.fnx.co.il/en/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/car-insurance/car_information/tips/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/car-insurance/car_information/whats-new/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/health-insurance/group-health-insurance-plans/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/health-insurance/group-dental-insurance-plan/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/life-insurance/group-life-insurance-terms/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/savings/savings-information/investing-real-estate/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/savings/quarterly-yield-components-maslul-life/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/savings/quarterly-yield-components-ted-yud/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/savings/yields-maslul/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/ishtalmutfund/ishtalmut-direct-expenses-statement/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/ishtalmutfund/ishtalmut-takanon-main/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/ishtalmutfund/ishtalmut-financial-report-main/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/child_investment/child-direct-expenses-statement/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/child_investment/child-investment-financial-reports/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/child_investment/child-investment-takanonim/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemelhashkaa/gemelhashkaa-direct-expenses-statement/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemelhashkaa/gemel-hashkaa-kupa-financial-reports/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemelhashkaa/gemel-hashkaa-kupa-takanon/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-about-the-company-2017/gemel-general-meetings/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-about-the-company-2017/gemel-monthly-reports/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-about-the-company-2017/gemel-yield-components/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-about-the-company-2017/newspapers-publications-gemel/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-about-the-company-2017/statements-of-management/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-about-the-company-2017/transactions-with-related-parties/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-kitzva/gemel-system/gemel-system-financial-report/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-kitzva/gemel-system/gemel-system-merkivey-tsuua/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-kitzva/gemel-system/gemel-system-nehasim/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-kitzva/gemel-system/gemel-system-takanon/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-kitzva/gemel-namal-israel/gemel-namal-ashkaa/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-kitzva/gemel-namal-israel/gemel-namal-financial-report/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-kitzva/gemel-namal-israel/gemel-namal-nehasim/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-kitzva/gemel-namal-israel/gemel-namal-takanon/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-kitzva/gemel-namal-israel/gemel-namal-markivey-tsua/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-kitzva/gemel-ashdod-port/ashdod-port-takanon/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-kitzva/gemel-ashdod-port/namal-ashdod-financial/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-kitzva/gemel-ashdod-port/namal-ashdod-nehasim/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-kitzva/gemel-ashdod-port/namal-ashdod-tsua/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-kitzva/merkaziot-otzaot/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-direct-expenses-statement/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-kupa-financial-reports/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-kupa-takanon/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/merkaziot-kupa-financial-reports/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/merkaziot-kupa-takanonim/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/esop/nihul-optziot/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/esop/halvaot-optzia/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/esop/nihul-kesef/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/haskaot-mitkadmot/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/haskaot-mitkadmot/kapital/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/haskaot-mitkadmot/helman/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/tags/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/claims_settlement/health_settle/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/claims_settlement/appartment_settle/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/claims_settlement/life_settle/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/claims_settlement/travel_settle/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/claims_settlement/supportive_settle/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/claims_settlement/car_settle/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/claims_settlement/personal-accidents_settle/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/claims_settlement/basic-member-settle/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/claims_settlement/general-pension-settle/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/claims_settlement/all-embracing-pension-settle/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/comparison-tables/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/claims-statistical-info/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/class-actions/credit-claim55447-06-15/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/class-actions/credit-claim41075-02-10/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/class-actions/credit-claim54549-12-21/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/class-actions/credit-claim34605-02-20/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/class-actions/credit-claim26507-06-17/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/class-actions/credit-claim34037-01-22/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/class-actions/credit-claim2329-07-20/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/class-actions/credit-claim32926-03-24/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/class-actions/credit-claim43761-06-18/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/class-actions/credit-claim11078-09-23/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/class-actions/credit-claim24167-07-14/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/class-actions/credit-claim27469-019-20/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/class-actions/credit-claim21007-05-13/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/chat/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/ituran/plumbers/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/ituran/forms/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/ituran/policies/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/ituran/dentists/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/investor-relations/presentations-reports-and-press-releases/presentations/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/investor-relations/presentations-reports-and-press-releases/financial-reports/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/investor-relations/presentations-reports-and-press-releases/conference-calls/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/investor-relations/presentations-reports-and-press-releases/solvency-reports/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/investor-relations/presentations-reports-and-press-releases/esg-reports/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/investor-relations/presentations-reports-and-press-releases/credit-ratings/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/investor-relations/presentations-reports-and-press-releases/nustro-all/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/investor-relations/presentations-reports-and-press-releases/additional-information/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/investor-relations/presentations-reports-and-press-releases/financial-spreadsheets/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/customer-service/terms-of-use/another-driver-terms-of-use/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/customer-service/terms-of-use/young-drivers-app-terms-of-use/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/customer-service/common-actions/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/portfolio-information-to-members-and-policyholders/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/the-expected-investment-policy/the-expected-investment-policy-2021/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/the-expected-investment-policy/the-expected-investment-policy-2022/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/the-expected-investment-policy/the-expected-investment-policy-2020/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/the-expected-investment-policy/the-expected-investment-policy-2019/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/the-expected-investment-policy/the-expected-investment-policy-2018/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/the-expected-investment-policy/the-expected-investment-policy-2017/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/the-expected-investment-policy/the-expected-investment-policy-2016/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/the-expected-investment-policy/the-expected-investment-policy-2015/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/the-expected-investment-policy/the-expected-investment-policy-2014/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/the-expected-investment-policy/the-expected-investment-policy-2013/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/the-expected-investment-policy/the-expected-investment-policy-2012/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/the-expected-investment-policy/the-expected-investment-policy-2011/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/the-expected-investment-policy/the-expected-investment-policy-2010/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/the-expected-investment-policy/the-expected-investment-policy-2023/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/the-expected-investment-policy/the-expected-investment-policy-2024/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/the-expected-investment-policy/the-expected-investment-policy-2025/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/the-expected-investment-policy/the-expected-investment-policy-2026/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/monthly-reports/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/participation-in-general-meetings/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/commissions-report-to-colleagues/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/lists-the-related-parties/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/reshimat-nichsey-hamevateah/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/fnx-insurance-ltd/kosherpiraon/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/fnx-insurance-ltd/financial-reports/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/fnx-insurance-ltd/announcements/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/calculators/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/calculators/investment_calculator/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/projectvalidation/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/guarantee-validation/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-all-embracing-pension/regulations-mekifa/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-all-embracing-pension/regulation-changes-mekifa/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-all-embracing-pension/mekifa-yields/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-all-embracing-pension/mekifa-fund-assets-information/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-all-embracing-pension/mekifa-quarterly-assets-list/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-all-embracing-pension/mekifa-monthly-reports/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-all-embracing-pension/mekifa-financial-reports-press-release/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-all-embracing-pension/mekifa-management-declarations/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-all-embracing-pension/mekifa-deals-with-related-parties/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-all-embracing-pension/mekifa-yield-components/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-all-embracing-pension/mekifa-direct-expenditure/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-all-embracing-pension/mekifa-direct-expenses-statement/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-mashlima-pension/mashlima-sub/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-mashlima-pension/mashlima-regulations/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-mashlima-pension/mashlima-regulation-changes/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-mashlima-pension/mashlima-yields/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-mashlima-pension/mashlima-fund-assets-information/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-mashlima-pension/mashlima-quarterly-assets-list/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-mashlima-pension/mashlima-monthly-reports/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-mashlima-pension/mashlima-financial-reports-press-release/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-mashlima-pension/mashlima-management-declarations/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-mashlima-pension/mashlima-deals-with-related-parties/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-mashlima-pension/mashlima-yield-components/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-mashlima-pension/mashlima-direct-expenditure/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-mashlima-pension/mashlima-direct-expenses-statement/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/hechsher-hilhati/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/iec-pension/iec-asefot-ishtatfut/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/iec-pension/iec-doch-hotsaot-cheshbonot-amitim/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/iec-pension/iec-takanonim/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/iec-pension/iec-mediniut-atzbaa/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/iec-pension/iec-mediniut-tagmul/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/iec-pension/iec-nechasei-hakupa/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/iec-pension/iec-markivei-veshiur-teshua/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/iec-pension/iec-monthly-report/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/iec-pension/iec-financial-reports/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/iec-pension/iec-kavim-manchim-letipul-behovot-baayatiim/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/iec-pension/iec-zdadim/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/yesod-pension-fund/yesod-yields/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/yesod-pension-fund/yesod-regulations/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/yesod-pension-fund/yesod-quarterly-assets-list/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/yesod-pension-fund/yesod-monthly-reports/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/yesod-pension-fund/yesod-deals-with-related-parties/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/yesod-pension-fund/yesod-direct-expenditure/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/yesod-pension-fund/yesod-management-declarations/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/yesod-pension-fund/yesod-regulation-changes/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/yesod-pension-fund/yesod-yield-components/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/yesod-pension-fund/finncial-reports-amit-vatika/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/pension-vatikot/old-pensions-monthly-report/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/pension-vatikot/magen-pension-vatika/magen-takanon-hakeren/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/pension-vatikot/magen-pension-vatika/magen-dochot-kaspiim/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/pension-vatikot/magen-pension-vatika/magen-matkivei-teshua/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/pension-vatikot/magen-pension-vatika/magen-tsdadim-kshurim/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/pension-vatikot/magen-pension-vatika/magen-reshimat-nechasim/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/pension-vatikot/magen-pension-vatika/magen-mediniyut-hashkaa/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/pension-vatikot/magen-pension-vatika/magen-hodaa-al-mitve-pshara/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/pension-vatikot/magen-pension-vatika/magen-hozaot-yeshirot/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/pension-vatikot/keren-lawyers/lawyer-hozaot-yeshirot/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/pension-vatikot/keren-lawyers/keren-lawyers-dochot-kaspiim/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/pension-vatikot/keren-lawyers/keren-lawyers-markivei-tesua/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/pension-vatikot/keren-lawyers/keren-lawyers-mediniut-hashkaa/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/pension-vatikot/keren-lawyers/keren-lawyers-reshimat-nechasim/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/pension-vatikot/keren-lawyers/keren-lawyers-takanon-hakeren/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/pension-vatikot/keren-lawyers/keren-lawyers-tsdadim-kshurim/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/fnx-balanced-pension-funds-management/contact-details/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/fnx-balanced-pension-funds-management/meuzan-vatika-deals-with-related-parties/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/fnx-balanced-pension-funds-management/meuzan-vatika-financial-report-press-release/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/fnx-balanced-pension-funds-management/meuzan-vatika-management-declarations/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/fnx-balanced-pension-funds-management/meuzan-vatika-related-parties-list/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/fnx-balanced-pension-funds-management/meuzan-vatika-votes-details/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/fnx-balanced-pension-funds-management/meuzan-vatika-quarterly-assets-list/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/fnx-balanced-pension-funds-management/meuzan-vatika-public-announcements/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/pension-management-declarations/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/pension-publications/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/pension-related-parties-list/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/pension-quarterly-assets-list/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/information/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/pension-votes-details/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/pension-announcements/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/finncial-reports/finncial-reports-fnx-pensia/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/finncial-reports/finncial-reports-amit-kupat-gemel-lepizoyim-till-2008/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/finncial-reports/finncial-reports-fnx-pensia-and-gemel/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/finncial-reports/finncial-reports-fnx-tagmulim-vepizoyim-sgoora/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/finncial-reports/finncial-reports-fnx-pizoyim-vetagmulim/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/finncial-reports/finncial-reports-fnx-mercazit-plan/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/finncial-reports/finncial-reports-fnx-mercazit-lepizuyim-sgoora/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/finncial-reports/finncial-reports-fnx-hishtalmut/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/finncial-reports/finncial-reports-amit-tagmulim-vepizuyim/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/finncial-reports/finncial-reports-amit-vatika/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/finncial-reports/financial-reports-gemel-nihul-ishi/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/finncial-reports/financial-reports-ishtalmut-nihul-ishi/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/sitemap/",
+      "status": "duplicate_content"
+    },
+    {
+      "url": "https://www.fnx.co.il/agents-promotions/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/calculators/excellnce_calculator/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/class-actions/credit-claim-33843-07-23/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/savings/excellence-invest/markevey-tsuaa-invest/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/savings/excellence-invest/invest-direct-expenses-statement/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-nehasim/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-about-the-company-2017/pizuyim_tagmulim_assetes/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-about-the-company-2017/hishtalmut_assetes/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-about-the-company-2017/gemel-list-of-assets/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-about-the-company-2017/gemel_regulations/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-about-the-company-2017/gemel-expenses-directly/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-about-the-company-2017/gemel-yields/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/gemel/gemel-about-the-company-2017/gemel-financial-statements/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/claims-customer-service/class-actions/credit-claim13309-08-17/",
+      "status": "needs_review"
+    },
+    {
+      "url": "https://www.fnx.co.il/investor-relations/presentations-reports-and-press-releases/press-releases/",
+      "status": "needs_review"
+    }
+  ],
+  "chunks": 14648,
+  "embedding_tokens": 6063546,
+  "max_chunk_tokens": 650,
+  "chunking_version": "headings-paragraphs-v1",
+  "max_tokens": 650,
+  "overlap_tokens": 80,
+  "encoding": "cl100k_base",
+  "generation": "20261022T153756Z-d361b1ab",
+  "mode": "semantic",
+  "status": "ready",
+  "created_at": "2026-10-22T15:37:56.812243+00:00",
+  "source_sha256": "0ce3a4980510999d654d65d36784e163756bb08e5ad65487bc1fafb4a6534f65",
+  "model": "text-embedding-3-large",
+  "dimensions": 3072,
+  "semantic_quality_verified": false,
+  "vector_backend": "sqlite-numpy-v1",
+  "chunks_sha256": "88456224f3d8b4bffc04fe8c699406bd7147e46809e229f637d95e5da8e8c38e"
+}
