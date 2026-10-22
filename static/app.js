@@ -68,6 +68,7 @@ const reset = document.getElementById('new-chat');
 const results = document.getElementById('results');
 const status = document.getElementById('status');
 const coverage = document.getElementById('coverage');
+const loadingBrand = document.getElementById('loading-brand');
 let history = [];
 let ready = false;
 let pending = false;
@@ -119,6 +120,7 @@ form.addEventListener('submit', async event => {
   pending = true;
   form.setAttribute('aria-busy', 'true');
   status.className = 'is-loading';
+  if (loadingBrand) loadingBrand.hidden = false;
   button.disabled = true;
   reset.disabled = true;
   status.textContent = 'מחפש במקורות ובודק את התשובה…';
@@ -177,6 +179,6 @@ form.addEventListener('submit', async event => {
     question.focus();
   } catch (error) {
     status.textContent = error.name === 'TimeoutError' ? 'המענה ארך זמן רב. המתיני לפני ניסיון נוסף; הבקשה עשויה עדיין להתבצע.' : (error.message || 'אירעה תקלה במענה.');
-  } finally { pending = false; status.className = ''; form.setAttribute('aria-busy', 'false'); button.disabled = !ready; reset.disabled = false; }
+  } finally { pending = false; status.className = ''; if (loadingBrand) loadingBrand.hidden = true; form.setAttribute('aria-busy', 'false'); button.disabled = !ready; reset.disabled = false; }
 });
 }
