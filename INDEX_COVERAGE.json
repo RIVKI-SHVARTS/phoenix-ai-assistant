@@ -1,7 +1,7 @@
 {
-  "generation": "20261018T084937Z-c79a873d",
-  "pages": 6,
-  "chunks": 178,
+  "generation": "20261022T153756Z-d361b1ab",
+  "pages": 885,
+  "chunks": 14648,
   "model": "text-embedding-3-large",
   "pdf_content_included": false,
   "coverage_verified_complete": false
