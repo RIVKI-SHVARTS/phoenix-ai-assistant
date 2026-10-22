@@ -48,6 +48,12 @@ const coverage = document.getElementById('coverage');
 let history = [];
 let ready = false;
 let pending = false;
+question.addEventListener('keydown', event => {
+  if (event.key !== 'Enter' || event.shiftKey || event.isComposing || event.keyCode === 229) return;
+  event.preventDefault();
+  if (event.repeat || pending || !ready || !question.value.trim()) return;
+  form.requestSubmit(button);
+});
 fetch('/api/health').then(async response => {
   const data = await response.json();
   if (!response.ok) throw new Error();
