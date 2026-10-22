@@ -81,7 +81,7 @@ question.addEventListener('keydown', event => {
 fetch('/api/health').then(async response => {
   const data = await response.json();
   if (!response.ok) throw new Error();
-  coverage.textContent = `המאגר כולל ${data.pages} עמודים ו־${data.chunks} קטעים. הכיסוי חלקי.`;
+  coverage.textContent = "חיפוש במידע מאתר הפניקס, עם מקורות וציטוטים תומכים.";
   ready = data.chat_ready;
   button.disabled = !ready;
   if (!ready) status.textContent = data.semantic_ready ? 'המענה אינו מוכן. יש להגדיר מפתח API בחלון שבו מופעל השרת ולהפעיל אותו מחדש.' : 'נדרש אינדקס סמנטי פעיל כדי להתחיל בשיחה.';
