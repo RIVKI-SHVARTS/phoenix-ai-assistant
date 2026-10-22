@@ -13,3 +13,4 @@ review-diagnostic*.json
 
 phoenix-final-checks*.json
 diagnostic-case-*.json
+/demo_index/*.staging-*/
