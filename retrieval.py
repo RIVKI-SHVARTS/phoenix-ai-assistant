@@ -30,10 +30,14 @@ class SearchIndex:
         )
         if self.manifest["status"] != "ready":
             raise ValueError("Index not ready")
-        raw = (self.path / "chunks.jsonl").read_bytes()
-        if hashlib.sha256(raw).hexdigest() != self.manifest["chunks_sha256"]:
+        digest = hashlib.sha256()
+        with (self.path / "chunks.jsonl").open('rb') as stream:
+            while block := stream.read(1024 * 1024):
+                digest.update(block)
+        if digest.hexdigest() != self.manifest["chunks_sha256"]:
             raise ValueError("Index hash mismatch")
-        self.chunks = [json.loads(line) for line in raw.decode("utf-8").splitlines()]
+        with (self.path / "chunks.jsonl").open(encoding='utf-8') as stream:
+            self.chunks = [json.loads(line) for line in stream]
         self.by_id = {c["chunk_id"]: c for c in self.chunks}
         if len(self.by_id) != self.manifest["chunks"]:
             raise ValueError("Chunk count mismatch")

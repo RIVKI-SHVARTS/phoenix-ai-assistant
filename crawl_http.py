@@ -36,6 +36,18 @@ def normalize(url, base='https://www.fnx.co.il'):
         return None
 
 
+def redirect_target(location, current, base):
+    """Upgrade same-host HTTP Location headers without ever requesting HTTP."""
+    try:
+        target = urlsplit(urljoin(current, location))
+        if (target.scheme == 'http' and target.hostname == urlsplit(base).hostname
+                and target.port in (None, 80) and not target.username and not target.password):
+            target = target._replace(scheme='https', netloc=urlsplit(base).netloc)
+        return normalize(target.geturl(), base)
+    except (ValueError, TypeError):
+        return None
+
+
 def retry_delay(value, now=None):
     if not value:
         return 0.0
@@ -119,7 +131,7 @@ class Client:
                     error.close()
                     self.events.append({'url': url, 'status': code})
                     if code in (301, 302, 303, 307, 308):
-                        target = normalize(urljoin(url, headers.get('Location', '')), self.c['base_url'])
+                        target = redirect_target(headers.get('Location', ''), url, self.c['base_url'])
                         if not target or not headers.get('Location'):
                             raise CrawlError('redirect_outside_scope_or_missing_location')
                         url = target

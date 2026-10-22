@@ -1,5 +1,6 @@
 """Export an allowlisted public project and its existing semantic index. No API calls."""
 import json
+from contextlib import closing
 import re
 from pathlib import Path
 import shutil
@@ -26,25 +27,25 @@ def export(destination):
     # No recursive copy of the user's working directory, secrets, usage ledgers or caches.
     names = [
         'answering.py', 'app.py', 'audit_crawl.py', 'chunking.py', 'crawl_http.py',
-        'crawler.py', 'diagnose_answer.py', 'diagnose_cases.py', 'diagnose_review.py',
+        'crawler.py', 'recover_crawl.py', 'diagnose_answer.py', 'diagnose_cases.py', 'diagnose_review.py',
         'embedding_provider.py', 'evaluate_retrieval.py', 'extract_content.py',
         'ingest.py', 'lexical_search.py', 'preflight.py', 'retrieval.py', 'vector_store.py',
-        'cloud_start.py', 'export_submission.py', 'run_chat_checks.py',
+        'cloud_start.py', 'index_package.py', 'build_expanded.py', 'publish_index.py', 'export_submission.py', 'run_chat_checks.py',
         'run_final_checks.py', 'finish_remaining_checks.py',
         'requirements.txt', 'requirements-crawler.txt', 'requirements-retrieval.txt',
         'requirements-cloud.txt', 'README.md', 'SUBMISSION_HE.md', 'DEPLOY_HE.md',
         'render.yaml', '.gitignore', 'crawl_config.json',
-        'static/app.js', 'static/style.css', 'templates/index.html',
+        'static/app.js', 'static/style.css', 'static/phoenix-logo.png', 'static/happy-bot.png', 'templates/index.html',
         'tests/test_answering.py', 'tests/test_app.py', 'tests/test_crawler.py',
         'tests/test_preflight.py', 'tests/test_retrieval.py', 'tests/test_final_checks.py',
-        'tests/test_cloud_export.py', 'tests/chat-ui.test.cjs', 'tests/source-links.test.cjs',
+        'tests/test_cloud_export.py', 'tests/test_index_package.py', 'tests/chat-ui.test.cjs', 'tests/source-links.test.cjs',
         'tests/fixtures/theft-diagnostic.json', 'tests/fixtures/mixed-request-diagnostic.json',
         'tests/fixtures/digital-claim-sources.json',
     ]
     for name in names:
         source_path = BASE / name
         # Refuse a likely hardcoded secret without printing the matching value.
-        if re.search(r'sk-[A-Za-z0-9_-]{20,}', source_path.read_text(encoding='utf-8')):
+        if source_path.suffix != '.png' and re.search(r'sk-[A-Za-z0-9_-]{20,}', source_path.read_text(encoding='utf-8')):
             raise ValueError('Possible hardcoded API key in an export file; export stopped.')
         target_path = destination / name
         target_path.parent.mkdir(parents=True, exist_ok=True)
@@ -61,8 +62,8 @@ def export(destination):
         shutil.copy2(index.path / name, out / name)
     # Consistent SQLite snapshot, including committed rows still in WAL if present.
     source_uri = 'file:' + quote(store.path.resolve().as_posix(), safe='/:') + '?mode=ro'
-    with sqlite3.connect(source_uri, uri=True) as source:
-        with sqlite3.connect(out / 'vectors/vectors.sqlite3') as target:
+    with closing(sqlite3.connect(source_uri, uri=True)) as source:
+        with closing(sqlite3.connect(out / 'vectors/vectors.sqlite3')) as target:
             source.backup(target)
     (out.parent / 'CURRENT.json').write_text(
         json.dumps({'generation': index.path.name}), encoding='utf-8')

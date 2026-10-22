@@ -61,7 +61,7 @@ def load_config(path, max_pages=None):
     return c
 
 
-def crawl(config, output_root, client=None):
+def crawl(config, output_root, client=None, known_urls=(), discover_sitemaps=True, discover_links=True):
     run_id = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ') + '-' + uuid.uuid4().hex[:8]
     out = Path(output_root) / run_id
     out.mkdir(parents=True, exist_ok=False)
@@ -69,7 +69,8 @@ def crawl(config, output_root, client=None):
     client = client or Client(config)
     manifest = {'run_id': run_id, 'started_at': utcnow(), 'extractor_version': VERSION, 'config': config,
                 'status': 'running', 'sitemaps': [], 'failures': [], 'pages': [], 'discovery_truncated': False}
-    queue, discovered, maps_seen, final_seen, hashes = deque(), {}, set(), set(), {}
+    known_urls = set(known_urls)
+    queue, discovered, maps_seen, final_seen, hashes = deque(), {}, set(), set(known_urls), {}
     attempts = 0
 
     def discover(raw, origin):
@@ -79,6 +80,8 @@ def crawl(config, output_root, client=None):
             manifest['discovery_truncated'] = True
             return
         url = normalize(raw, config['base_url'])
+        if url in known_urls:
+            return
         if url and url in discovered:
             return
         key = url or raw
@@ -95,8 +98,8 @@ def crawl(config, output_root, client=None):
         manifest['effective_delay_seconds'] = client.delay
         for seed in config['seeds']:
             discover(seed, 'seed')
-        map_queue = deque(client.policy.sitemaps or [])
-        if not map_queue:
+        map_queue = deque(client.policy.sitemaps or []) if discover_sitemaps else deque()
+        if discover_sitemaps and not map_queue:
             map_queue.append(config['base_url'] + '/sitemap.xml')
         while map_queue and len(maps_seen) < config['max_sitemaps']:
             raw_url = map_queue.popleft()
@@ -149,8 +152,10 @@ def crawl(config, output_root, client=None):
                     (out / 'raw' / f'{key}.html').write_bytes(raw)
                     # BeautifulSoup detects HTML encoding from original response bytes.
                     page = extract_page(raw, final)
-                    for link in page.pop('discovered_links'):
-                        discover(link, final)
+                    links = page.pop('discovered_links')
+                    if discover_links:
+                        for link in links:
+                            discover(link, final)
                     page.update({'requested_url': url, 'fetched_at': utcnow(), 'content_type': content_type,
                                  'raw_file': f'raw/{key}.html', 'raw_sha256': hashlib.sha256(raw).hexdigest()})
                     digest = page.get('content_hash')
