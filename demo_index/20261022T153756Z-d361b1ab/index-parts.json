@@ -1,0 +1,13 @@
+[
+  {
+    "file": "vectors/vectors.sqlite3",
+    "parts": [
+      "vectors/vectors.sqlite3.part0000",
+      "vectors/vectors.sqlite3.part0001",
+      "vectors/vectors.sqlite3.part0002",
+      "vectors/vectors.sqlite3.part0003"
+    ],
+    "sha256": "c8d49885d0c187f461db2e712ab87697ace5117a3322861f010e65eb7624b9db",
+    "bytes": 188723200
+  }
+]
