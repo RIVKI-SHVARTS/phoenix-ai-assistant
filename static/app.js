@@ -100,7 +100,10 @@ function addSource(parent, source) {
   if (url.protocol !== 'https:' || url.hostname !== 'www.fnx.co.il' || url.username || url.password) return;
   const details = document.createElement('details');
   const summary = document.createElement('summary');
-  summary.textContent = `[${source.source_id}] ${source.heading || source.page_title}`;
+  const badge = document.createElement('span');
+  badge.className = 'source-badge';
+  badge.textContent = `מקור ${source.source_id.replace(/^S/, '')}`;
+  summary.append(badge, document.createTextNode(` ${source.heading || source.page_title}`));
   const body = document.createElement('p');
   body.className = 'source-text';
   appendSourceText(body, source.text, true);
@@ -150,9 +153,10 @@ form.addEventListener('submit', async event => {
           anchor.href = source.page_url;
           anchor.target = '_blank';
           anchor.rel = 'noopener noreferrer';
-          anchor.textContent = ` [${id}]`;
+          anchor.textContent = `מקור ${id.replace(/^S/, '')}`;
+          anchor.title = `${source.page_title} — ${source.heading || ''}`;
           anchor.className = 'source-ref';
-          anchor.setAttribute('aria-label', `פתיחת מקור ${id}`);
+          anchor.setAttribute('aria-label', `פתיחת מקור ${id.replace(/^S/, '')} באתר הפניקס`);
           paragraph.append(anchor);
         }
         card.append(paragraph);
@@ -200,7 +204,7 @@ form.addEventListener('submit', async event => {
         paragraph.append(toggle);
         for (const evidence of claim.evidence) {
           const quote = document.createElement('blockquote');
-          appendSourceText(quote, `[${evidence.source_id}] ${evidence.quote || ''}`, true);
+          appendSourceText(quote, `מקור ${evidence.source_id.replace(/^S/, '')} — ${evidence.quote || ''}`, true);
           proof.append(quote);
         }
         card.append(proof);

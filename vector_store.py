@@ -56,7 +56,9 @@ class VectorStore:
         query = self._normalize(vector)
         best = []
         with closing(sqlite3.connect(self.path)) as db:
-            cursor = db.execute("SELECT id,vector FROM vectors ORDER BY id")
+            # The heap already resolves ties by ID. A full table scan avoids
+            # seeking through the ID index for every large vector blob.
+            cursor = db.execute("SELECT id,vector FROM vectors")
             while rows := cursor.fetchmany(256):
                 if any(len(blob) != self.dimensions * 4 for _, blob in rows):
                     raise ValueError("Corrupt stored vector")

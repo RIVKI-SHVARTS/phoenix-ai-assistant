@@ -20,3 +20,9 @@
 .claim-proof h3{font-size:.9rem;margin:0 0 8px}
 .claim-proof blockquote{font-size:.93rem;margin:10px 0}
 @media(max-width:600px){.proof-toggle{width:44px;min-width:44px;height:44px;padding:10px}.claim-proof{padding:12px}}
+
+/* Human-readable source badges in the existing orange/navy palette. */
+.source-ref,.source-badge{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;font-size:.76rem;font-weight:normal;line-height:1.5;padding:2px 9px;margin-inline:4px;border:1px solid #f4c39d;border-radius:999px;background:#fff4e9;color:var(--navy);text-decoration:none;vertical-align:baseline}
+.source-ref:hover{background:#ffe4cc;border-color:var(--orange);color:var(--navy);text-decoration:none}
+.source-ref:focus-visible{outline:3px solid #ffb786;outline-offset:3px}
+.source-badge{margin-inline-start:0;margin-inline-end:7px;font-size:.8rem}
