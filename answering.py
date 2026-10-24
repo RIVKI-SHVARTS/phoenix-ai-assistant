@@ -245,6 +245,54 @@ def validate_input(question, history):
         raise ValueError("היסטוריית השיחה אינה תקינה או ארוכה מדי.")
 
 
+
+# Per-request timing only: never log questions, quotes, keys or model output.
+from contextvars import ContextVar
+from functools import wraps
+import logging
+from time import perf_counter
+
+_latency_stages = ContextVar("phoenix_latency_stages", default=None)
+
+def _measure_answer(method):
+    @wraps(method)
+    def wrapped(*args, **kwargs):
+        stages = []
+        token = _latency_stages.set(stages)
+        started = perf_counter()
+        outcome = "error"
+        try:
+            result = method(*args, **kwargs)
+            outcome = result.get("status", "unknown")
+            return result
+        finally:
+            logging.getLogger(__name__).warning("phoenix_latency %s", json.dumps({
+                "request_id": uuid.uuid4().hex[:12], "outcome": outcome,
+                "total_ms": round((perf_counter() - started) * 1000), "stages": stages}))
+            _latency_stages.reset(token)
+    return wrapped
+
+def _measure_model(method):
+    @wraps(method)
+    def wrapped(self, instructions, payload, shape, max_output=2400):
+        started = perf_counter()
+        try:
+            return method(self, instructions, payload, shape, max_output)
+        finally:
+            stages = _latency_stages.get()
+            if stages is not None:
+                stages.append({"stage": shape.__name__, "ms": round((perf_counter() - started) * 1000)})
+    return wrapped
+
+def _measured_search(index, query):
+    started = perf_counter()
+    try:
+        return index.search(query, mode="hybrid", limit=8)["results"]
+    finally:
+        stages = _latency_stages.get()
+        if stages is not None:
+            stages.append({"stage": "retrieval", "ms": round((perf_counter() - started) * 1000)})
+
 class AnswerService:
     def __init__(self, root, api_client=None, budget=None):
         self.root = Path(root)
@@ -256,6 +304,7 @@ class AnswerService:
             api_client = OpenAI(base_url="https://api.openai.com/v1", max_retries=0, timeout=45)
         self.client = api_client
 
+    @_measure_model
     def _call(self, instructions, payload, shape, max_output=2400):
         content = json.dumps(payload, ensure_ascii=False)
         schema = shape.model_json_schema()
@@ -311,6 +360,7 @@ class AnswerService:
         return {"status": "limited", "answer": text, "claims": [],
                 "sources": [], "answer_generated": False}
 
+    @_measure_answer
     def answer(self, index, question, history=None):
         history = [] if history is None else history
         validate_input(question, history)
@@ -336,7 +386,7 @@ class AnswerService:
                 return self._capability_limit(limit)
             if explicit_personal_coverage(query):
                 return self._personal_limit()
-        rows = index.search(query, mode="hybrid", limit=8)["results"]
+        rows = _measured_search(index, query)
         sources = []
         for row in rows:
             if not safe_source(row["page_url"]):

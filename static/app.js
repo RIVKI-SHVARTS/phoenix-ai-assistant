@@ -102,7 +102,7 @@ function addSource(parent, source) {
   summary.textContent = `[${source.source_id}] ${source.heading || source.page_title}`;
   const body = document.createElement('p');
   body.className = 'source-text';
-  appendSourceText(body, source.text);
+  appendSourceText(body, source.text, true);
   const link = document.createElement('a');
   link.href = url.href;
   link.target = '_blank';
@@ -157,7 +157,7 @@ form.addEventListener('submit', async event => {
         proof.append(proofTitle);
         for (const evidence of claim.evidence) {
           const quote = document.createElement('blockquote');
-          quote.textContent = `[${evidence.source_id}] ${evidence.quote || ''}`;
+          appendSourceText(quote, `[${evidence.source_id}] ${evidence.quote || ''}`, true);
           proof.append(quote);
         }
         card.append(proof);
