@@ -58,13 +58,18 @@ class VectorStore:
         with closing(sqlite3.connect(self.path)) as db:
             cursor = db.execute("SELECT id,vector FROM vectors ORDER BY id")
             while rows := cursor.fetchmany(256):
-                vectors = [np.frombuffer(blob, dtype="<f4") for _, blob in rows]
-                if any(v.shape != (self.dimensions,) or not np.isfinite(v).all() for v in vectors):
+                if any(len(blob) != self.dimensions * 4 for _, blob in rows):
                     raise ValueError("Corrupt stored vector")
-                scores = np.stack(vectors) @ query
+                matrix = np.frombuffer(b"".join(blob for _, blob in rows), dtype="<f4").reshape(len(rows), self.dimensions)
+                if not np.isfinite(matrix).all():
+                    raise ValueError("Corrupt stored vector")
+                # Bounded exact search without starting BLAS worker threads for
+                # every small batch on a shared CPU. Keep the full candidate set.
+                scores = np.einsum("ij,j->i", matrix, query, optimize=False)
+                distances = np.clip(1 - scores, 0, 2)
                 best = heapq.nsmallest(limit, best + [
-                    (float(np.clip(1 - score, 0, 2)), key)
-                    for (key, _), score in zip(rows, scores)
+                    (float(distance), key)
+                    for (key, _), distance in zip(rows, distances)
                 ])
         return [(key, distance) for distance, key in best]
 

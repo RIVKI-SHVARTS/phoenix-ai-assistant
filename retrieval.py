@@ -5,6 +5,8 @@ import hashlib
 import json
 from pathlib import Path
 import re
+import logging
+from time import perf_counter
 from lexical_search import LexicalSearch
 
 
@@ -55,11 +57,13 @@ class SearchIndex:
             raise ValueError("Question must contain 1–2000 characters")
         if mode not in ("lexical", "semantic", "hybrid") or not 1 <= limit <= 20:
             raise ValueError("Invalid search options")
+        stage_started = perf_counter()
         lexical = (
             self.lexical.search(question, min(30, max(limit, 12)))
             if mode != "semantic"
             else []
         )
+        lexical_ms = round((perf_counter() - stage_started) * 1000)
         if mode == "lexical":
             return {
                 "mode": "lexical",
@@ -73,6 +77,7 @@ class SearchIndex:
             )
         if self.manifest.get("vector_backend") != "sqlite-numpy-v1":
             raise ValueError("Old vector backend; rebuild the semantic index with updated ingest.py")
+        stage_started = perf_counter()
         if self.provider is None:
             from embedding_provider import OpenAIEmbeddings, TokenBudget
 
@@ -92,7 +97,12 @@ class SearchIndex:
                 self.path / "vectors", self.provider.model, self.provider.dimensions
             )
         vector = self.provider.embed([question])[0]
+        embedding_ms = round((perf_counter() - stage_started) * 1000)
+        stage_started = perf_counter()
         semantic = self.store.query(vector, min(30, max(limit, 12)))
+        logging.getLogger(__name__).warning("phoenix_retrieval %s", json.dumps({
+            "lexical_ms": lexical_ms, "embedding_setup_ms": embedding_ms,
+            "vector_ms": round((perf_counter() - stage_started) * 1000)}))
         ids = [row[0] for row in semantic]
         if mode == "hybrid":
             ids = merge_rankings([r["chunk_id"] for r in lexical], ids, limit)

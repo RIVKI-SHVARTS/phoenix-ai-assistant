@@ -72,6 +72,7 @@ const loadingBrand = document.getElementById('loading-brand');
 let history = [];
 let ready = false;
 let pending = false;
+let proofSequence = 0;
 question.addEventListener('keydown', event => {
   if (event.key !== 'Enter' || event.shiftKey || event.isComposing || event.keyCode === 229) return;
   event.preventDefault();
@@ -133,6 +134,10 @@ form.addEventListener('submit', async event => {
     title.textContent = text;
     card.append(title);
     if (data.status === 'answered') {
+      const hint = document.createElement('p');
+      hint.className = 'proof-hint';
+      hint.textContent = 'לצפייה בציטוט התומך, לחצו על סמל המסמך לצד הפסקה.';
+      card.append(hint);
       for (const claim of data.claims) {
         const paragraph = document.createElement('p');
         paragraph.className = 'answer-text';
@@ -146,15 +151,53 @@ form.addEventListener('submit', async event => {
           anchor.target = '_blank';
           anchor.rel = 'noopener noreferrer';
           anchor.textContent = ` [${id}]`;
+          anchor.className = 'source-ref';
           anchor.setAttribute('aria-label', `פתיחת מקור ${id}`);
           paragraph.append(anchor);
         }
         card.append(paragraph);
-        const proof = document.createElement('details');
+        const proof = document.createElement('section');
         proof.className = 'claim-proof';
-        const proofTitle = document.createElement('summary');
-        proofTitle.textContent = 'למה זו התשובה? הצגת הציטוטים';
+        proof.hidden = true;
+        proof.id = `claim-proof-${++proofSequence}`;
+        const proofTitle = document.createElement('h3');
+        proofTitle.id = `${proof.id}-title`;
+        proofTitle.textContent = 'הציטוטים שעליהם מבוססת הפסקה';
+        proof.setAttribute('aria-labelledby', proofTitle.id);
         proof.append(proofTitle);
+        const toggle = document.createElement('button');
+        toggle.type = 'button';
+        toggle.className = 'proof-toggle';
+        toggle.title = 'למה זו התשובה? הצגת הציטוטים';
+        toggle.setAttribute('aria-label', `למה זו התשובה? הצגת הציטוטים לפסקה ${data.claims.indexOf(claim) + 1}`);
+        toggle.setAttribute('aria-controls', proof.id);
+        toggle.setAttribute('aria-expanded', 'false');
+        const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        icon.setAttribute('viewBox', '0 0 24 24');
+        icon.setAttribute('aria-hidden', 'true');
+        icon.setAttribute('focusable', 'false');
+        const outline = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        outline.setAttribute('d', 'M12 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9l5 5v3M14 3v5h5M7 8h3M7 12h5M7 16h3M19 19l3 3');
+        const lens = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        lens.setAttribute('cx', '16');
+        lens.setAttribute('cy', '16');
+        lens.setAttribute('r', '4');
+        icon.append(outline, lens);
+        toggle.append(icon);
+        toggle.addEventListener('click', () => {
+          proof.hidden = !proof.hidden;
+          toggle.setAttribute('aria-expanded', String(!proof.hidden));
+        });
+        const dismiss = event => {
+          if (event.key !== 'Escape' || proof.hidden) return;
+          event.preventDefault();
+          proof.hidden = true;
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.focus();
+        };
+        toggle.addEventListener('keydown', dismiss);
+        proof.addEventListener('keydown', dismiss);
+        paragraph.append(toggle);
         for (const evidence of claim.evidence) {
           const quote = document.createElement('blockquote');
           appendSourceText(quote, `[${evidence.source_id}] ${evidence.quote || ''}`, true);
